@@ -12,4 +12,4 @@ The only thing you can do is be aware, and that's why I made this. Originally it
 ### How to use
 Simply install [Tampermonkey](https://www.tampermonkey.net/) or a similar extension and install the userscript.
 
-[https://github.com/DoctorFudge/Bookjackers/releases/download/Finished/Bookjackers-1.1.user.js](https://github.com/DoctorFudge/Bookjackers/releases/download/Stable/Bookjackers-1.1.user.js)
+[https://github.com/DoctorFudge/Bookjackers/releases/download/Finished/Bookjackers-1.21.user.js](https://github.com/DoctorFudge/Bookjackers/releases/download/Stable/Bookjackers-1.2.user.js)
