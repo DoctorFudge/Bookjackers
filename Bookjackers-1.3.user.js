@@ -7,6 +7,8 @@
 // @match        *://*.abebooks.com/*
 // @match        *://*.biblio.com/*
 // @match        *://*.bookshop.org/*
+// @match        *://*.amazon.*/*
+// @match        *://*.ebay.*/*
 // @grant        none
 // ==/UserScript==
 
