@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bookjackers
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Highlights bookjackers' names as a warning.
 // @author       Fudge
 // @match        *://*/*
@@ -48,7 +48,7 @@
                 span.innerHTML = node.nodeValue.replace(regex, '<span style="background-color: red; color: white;">$&</span>');
                 node.parentNode.replaceChild(span, node);
             }
-        } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+        } else if (node.nodeType === 1 && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE' && node.nodeName !== 'INPUT' && node.nodeName !== 'TEXTAREA' && !node.isContentEditable) {
             for (let i = 0; i < node.childNodes.length; i++) {
                 highlightText(node.childNodes[i]);
             }
