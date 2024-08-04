@@ -14,4 +14,4 @@ Simply install [Tampermonkey](https://www.tampermonkey.net/) or a similar extens
 
 [https://github.com/DoctorFudge/Bookjackers/releases/download/Finished/Bookjackers-1.0.user.js](https://github.com/DoctorFudge/Bookjackers/releases/download/Stable/Bookjackers-1.1.user.js)
 
-Once done you can come back here and see that, right here, "Ergodebooks" is now highlighted.
+Once done you can come back here and see that, right here, "ergodebooks" is now highlighted.
