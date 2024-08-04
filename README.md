@@ -1,5 +1,9 @@
 This is a simple userscript which simply uses a list of the names of common sellers on Abebooks known to the community as "bookjackers" to highlight the names in red to make them more visible, and to remind you to be wary.
 
+New:
+
+It also highlights members of the IOBA in green.
+
 ### What is a "Bookjacker" and why do I care?
 A bookjacker is an online seller who lists books for sale that they don't actually have. They usually profess higher qualities, they might even outright lie about the edition you'll get, and they're not to be trusted under any circumstances. In truth, they *can't* guarantee the quality or accuracy of their listings. They list books for sale that they don't have, then when you buy the book from them, they will order the book from another seller to deliver to you. This is, as it happens, against the Abebooks terms of service, but Amazon doesn't care.
 
