@@ -31,11 +31,11 @@
         'MyGrandmasGoodies', 'myrockland', 'nearfine-us', 'NOHINSA BOOKS', 'nuggetbooks33',
         'OTTAPLACKAL BOOKS', 'Paradise', 'Park Place Products', 'planet_books', 'Pop\'s Shop Online',
         'price break', 'profnath', 'Quality7', 'relationship', 'Save With Sam', 'sbd',
-        'Serendipity UnLtd', 'SGS Trading Inc', 'shopbychoice', 'soundtrack', 'southlandplace',
+        'Serendipity UnLtd', 'SGS Trading Inc', 'shopbychoice', 'southlandplace',
         'Strait City Trading', 'Successful New', 'Summit Read', 'SunnyDeer Sales', 'Sunshine & Firefly Canada',
         'the_book_community', 'thebookgrove', 'TOTAL BOOKS', 'Tradingcenter', 'TSCBOOKS',
         'Twin City Rarities', 'UCAEDU70', 'US_Bookseller', 'Vault Media', 'walton_boostore',
-        'Wisepenny Books', 'Wizard Books', 'Woody\'s Books', 'worldreaders', 'Thriftbooks'
+        'Wisepenny Books', 'Wizard Books', 'Woody\'s Books', 'worldreaders'
     ];
 
     const regex = new RegExp('\\b(' + words.join('|') + ')\\b', 'gi');
