@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bookjackers
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Highlights bookjackers' names as a warning.
 // @author       Fudge
 // @match        *://*/*
