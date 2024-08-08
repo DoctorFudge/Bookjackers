@@ -23,26 +23,20 @@
 	}
 	const sanitizedWordsList1 = wordsList1.map(sanitizeWord);
 	const sanitizedWordsList2 = wordsList2.map(sanitizeWord);
-	const regexList1 = new RegExp('\\b(' + sanitizedWordsList1.join('|') + ')\\b', 'gi');
-	const regexList2 = new RegExp('\\b(' + sanitizedWordsList2.join('|') + ')\\b', 'gi');
-
-	function sanitizeWord(word) {
-		return word.replace(/&/g, '(?:&|and)').replace(/’|`/g, '(?:\'|’|`)').replace(/'/g, '(?:\'|’|`)').replace(/[\s-_]/g, '[\\s-_]*');
-	}
-	const sanitizedWordsList1 = wordsList1.map(sanitizeWord);
-	const sanitizedWordsList2 = wordsList2.map(sanitizeWord);
 	const regexList1 = new RegExp('(' + sanitizedWordsList1.join('|') + ')', 'gi');
 	const regexList2 = new RegExp('(' + sanitizedWordsList2.join('|') + ')', 'gi');
 
 	function highlightText(node) {
-		if (node.nodeType === 3) {
+		if (node.nodeType === 3 && !node.parentNode.classList.contains('bookjacker') && !node.parentNode.classList.contains('supercool')) {
 			let match;
 			if ((match = node.nodeValue.match(regexList1))) {
 				const span = document.createElement('span');
+				span.classList.add('bookjacker');
 				span.innerHTML = node.nodeValue.replace(regexList1, '<span style="background-color: red; color: white;">$&</span>');
 				node.parentNode.replaceChild(span, node);
 			} else if ((match = node.nodeValue.match(regexList2))) {
 				const span = document.createElement('span');
+				span.classList.add('supercool');
 				span.innerHTML = node.nodeValue.replace(regexList2, '<span style="background-color: darkgreen; color: white; font-weight: bold;">$&</span>');
 				node.parentNode.replaceChild(span, node);
 			}
@@ -55,7 +49,25 @@
 
 	function highlightPage() {
 		highlightText(document.body);
+		const notification = document.createElement('div');
+		notification.style.position = 'fixed';
+		notification.style.bottom = '10px';
+		notification.style.right = '10px';
+		notification.style.padding = '10px';
+		notification.style.backgroundColor = 'black';
+		notification.style.color = 'white';
+		notification.style.opacity = '0.8';
+		notification.style.zIndex = '9999';
+		notification.style.borderRadius = '5px';
+		notification.innerText = 'Sellers Highlighted';
+		document.body.appendChild(notification);
+		setTimeout(() => {
+			notification.style.transition = 'opacity 2s';
+			notification.style.opacity = '0';
+			setTimeout(() => {
+				notification.remove();
+			}, 2000);
+		}, 2000);
 	}
-	highlightPage();
-	setInterval(highlightPage, 2000);
+	setTimeout(highlightPage, 5000);
 })();
