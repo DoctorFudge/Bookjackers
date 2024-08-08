@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         Bookjackers
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Highlights bookjackers' names as a warning.
 // @author       Fudge
 // @match        *://*.abebooks.com/*
 // @match        *://*.biblio.com/*
 // @match        *://*.bookshop.org/*
-// @match        *://*.amazon.*/*
-// @match        *://*.ebay.*/*
+// @match        *://*.amazon.*
+// @match        *://*.ebay.*
+// @match        *://*.vialibri.*
 // @grant        none
 // ==/UserScript==
 
@@ -24,6 +25,14 @@
 	const sanitizedWordsList2 = wordsList2.map(sanitizeWord);
 	const regexList1 = new RegExp('\\b(' + sanitizedWordsList1.join('|') + ')\\b', 'gi');
 	const regexList2 = new RegExp('\\b(' + sanitizedWordsList2.join('|') + ')\\b', 'gi');
+
+	function sanitizeWord(word) {
+		return word.replace(/&/g, '(?:&|and)').replace(/’|`/g, '(?:\'|’|`)').replace(/'/g, '(?:\'|’|`)').replace(/[\s-_]/g, '[\\s-_]*');
+	}
+	const sanitizedWordsList1 = wordsList1.map(sanitizeWord);
+	const sanitizedWordsList2 = wordsList2.map(sanitizeWord);
+	const regexList1 = new RegExp('(' + sanitizedWordsList1.join('|') + ')', 'gi');
+	const regexList2 = new RegExp('(' + sanitizedWordsList2.join('|') + ')', 'gi');
 
 	function highlightText(node) {
 		if (node.nodeType === 3) {
@@ -43,5 +52,10 @@
 			}
 		}
 	}
-	highlightText(document.body);
+
+	function highlightPage() {
+		highlightText(document.body);
+	}
+	highlightPage();
+	setInterval(highlightPage, 2000);
 })();
