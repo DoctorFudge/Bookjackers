@@ -69,5 +69,5 @@
 			}, 2000);
 		}, 2000);
 	}
-	setTimeout(highlightPage, 5000);
+	setTimeout(highlightPage, 5000); // 5-second delay in milliseconds, adjust to taste.
 })();
