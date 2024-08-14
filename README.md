@@ -1,4 +1,4 @@
-This is a simple userscript which simply uses a list of the names of common sellers on Abebooks known to the community as "bookjackers" to highlight the names in red to make them more visible, and to remind you to be wary. It also highlights members of the IOBA in green.
+This is a simple userscript which merely uses a list of the names of common sellers on Abebooks known to the community as "bookjackers" to highlight the names in red to make them more visible, and to remind you to be wary. It also highlights members of the IOBA in green.
 
 Works on:
 
