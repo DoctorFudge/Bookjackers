@@ -130,7 +130,7 @@
 		notification.style.opacity = '0.8';
 		notification.style.zIndex = '9999';
 		notification.style.borderRadius = '5px';
-		notification.innerText = `Sellers Highlighted (${baddudes.length} bad, ${cooldudes.length} good)`;
+		notification.innerText = `Sellers Highlighted`;
 		document.body.appendChild(notification);
 		
 		setTimeout(() => {
