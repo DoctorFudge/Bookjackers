@@ -22,3 +22,5 @@ The only thing you can do is be aware, and that's why I made this. Originally it
 Simply install [Tampermonkey](https://www.tampermonkey.net/) or a similar extension and install the userscript.
 
 https://github.com/DoctorFudge/Bookjackers/releases/download/Stable/Bookjackers-1.5.user.js
+
+On visiting one of the relevant websites, the script will attempt to read the sellers.json file in this github, and prompt you to allow the cross-domain reference. It's just a text file containing json-formatted lists of seller names, and does nothing nefarious.
