@@ -1,4 +1,4 @@
-This is a simple userscript which merely uses a list of the names of common sellers on Abebooks known to the community as "bookjackers" to highlight the names in red to make them more visible, and to remind you to be wary. It also highlights members of the IOBA in green.
+This is a simple userscript which merely uses a list of the names of common sellers on Abebooks known to the community as "bookjackers" to highlight the names in red to make them more visible, and to remind you to be wary. It also highlights members of the IOBA in green, I may add AABA to the list too I just found IOBA's database easier to navigate so it took less time, it'd probably be easier if there was an API somewhere to talk to to get names but that's probably asking too much.
 
 Works on:
 
@@ -16,7 +16,7 @@ A more in-depth explanation can be read here:
 
 https://www.zubalbooks.com/article-bookjacking.jsp
 
-The only thing you can do is be aware, and that's why I made this. Originally it was for myself, but I saw a few posts on Reddit and decided I'd chuck it up here.
+The only thing you can do is be aware, and that's why I made this. Originally it was for myself, but I saw a few posts on Reddit and decided I'd chuck it up here, which should go some way towards explaining some eccentricities in the script.
 
 ### How to use
 Simply install [Tampermonkey](https://www.tampermonkey.net/) or a similar extension and install the userscript.
